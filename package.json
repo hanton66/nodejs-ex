@@ -19,6 +19,9 @@
   },
   "scripts": {
     "start": "node server.js",
+    "charts": "node view/charts_min.js"
+    "util": "node view/utils.js"
+    "basic": "node view/basci.js"
     "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js"
   },
   "repository": {
