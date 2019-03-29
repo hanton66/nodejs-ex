@@ -192,47 +192,41 @@ window.chartColors = {
 	<script type="text/javascript" language="javascript">
 	
 	
+
+		var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		var config = {
 			type: 'line',
 			data: {
-				labels: ['L', 'G', 'K', 'X'],
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
 				datasets: [{
-					label: 'First',
-					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.blue,
-					data: [ -11, -14, -9, -11 ],
+					label: 'My First dataset',
+					backgroundColor: window.chartColors.red,
+					borderColor: window.chartColors.red,
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor()
+					],
 					fill: false,
 				}, {
-					label: 'Second',
+					label: 'My Second dataset',
+					fill: false,
 					backgroundColor: window.chartColors.blue,
 					borderColor: window.chartColors.blue,
-					data: [ -7, -2, -9, -6 ],
-					fill: false,
-				}, {
-					label: 'Third',
-					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.blue,
-					data: [ -3, -2, -5, -4],
-					fill: false,
-				},{
-					label: 'Fourth',
-					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.blue,
-					data: [ 1,2,4,2],
-					fill: false,
-				}, {
-					label: 'Fith',
-					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.blue,
-					data: [ 4,3,4,5 ],
-					fill: false,
-				},{
-					label: 'Sixth',
-					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.blue,
-					data: [ 7,3,8,7 ],
-					fill: false,
-				}],	
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor()
+					],
+				}]
 			},
 			options: {
 				responsive: true,
@@ -253,7 +247,7 @@ window.chartColors = {
 						display: true,
 						scaleLabel: {
 							display: true,
-							labelString: 'Bandindex'
+							labelString: 'Month'
 						}
 					}],
 					yAxes: [{
